@@ -2,7 +2,10 @@
 import logo from "../assets/logo.png";
 ---
 
-<nav class="flex flex-col justify-between items-center py-4 px-6">
+<nav
+  id="main-nav"
+  class="sticky top-0 z-50 flex flex-col justify-between items-center py-4 px-6 backdrop-blur-md transition-all border-white/0 border-b"
+>
   <div class="max-w-5xl flex justify-between items-center w-full">
     <div class="flex items-center gap-x-3">
       <img src={logo.src} alt="stem2k" class="size-8 shadow" />
@@ -26,3 +29,20 @@ import logo from "../assets/logo.png";
     </div>
   </div>
 </nav>
+
+<script>
+  const nav = document.getElementById("main-nav");
+  let lastScrollY = window.scrollY;
+
+  function updateNav() {
+    if (window.scrollY > 10) {
+      nav?.classList.add("!border-white/10");
+    } else {
+      nav?.classList.remove("!border-white/10");
+    }
+    lastScrollY = window.scrollY;
+  }
+
+  window.addEventListener("scroll", updateNav);
+  updateNav(); // Check initial state
+</script>
