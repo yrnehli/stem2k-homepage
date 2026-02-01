@@ -1,0 +1,25 @@
+---
+import pwa from "/public/pwa.mp4";
+---
+
+<div class="col-span-12 flex flex-col items-center justify-center mb-64">
+  <div
+    class="flex flex-col items-center justify-center gap-y-4 mb-6 text-center"
+  >
+    <h1 class="text-6xl font-bold">Install as a standalone app</h1>
+  </div>
+  <p
+    class="text-balance text-white/80 text-xl font-medium max-w-4xl text-center mb-10"
+  >
+    For best compatibility, use a Chromium-based browser.
+  </p>
+
+  <div class="overflow-hidden rounded-xl">
+    <video
+      src={pwa}
+      class="max-w-5xl object-cover col-span-12 w-full -mt-[3px] scale-[102%]"
+      autoplay
+      muted
+      loop></video>
+  </div>
+</div>

@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Pricing from "../components/Pricing.astro";
+import Features from "../components/Features.astro";
+import Support from "../components/Support.astro";
+import PWA from "../components/PWA.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div
+    class="min-h-dvh text-white bg-linear-to-br from-[#0a0a0f] via-[#15121f] to-[#1a1425] max-w-screen"
+  >
+    <Nav />
+    <div class="flex flex-col items-center justify-center my-12 px-8">
+      <div class="max-w-7xl w-full grid grid-cols-12">
+        <Hero />
+        <Features />
+        <PWA />
+        <Pricing />
+        <Support />
+      </div>
+    </div>
+  </div>
 </Layout>
