@@ -4,7 +4,7 @@ import logo from "/public/logo.png";
 
 <nav
   id="main-nav"
-  class="sticky top-0 z-50 flex flex-col justify-between items-center py-4 px-6 backdrop-blur-md transition-all border-white/0 border-b"
+  class="sticky top-0 z-50 flex flex-col justify-between items-center py-4 px-6 backdrop-blur-md transition-all border-white/0 border-b bg-[#0A0A10]"
 >
   <div class="max-w-5xl flex justify-between items-center w-full">
     <a href="/" class="flex items-center gap-x-3">
@@ -46,8 +46,10 @@ import logo from "/public/logo.png";
   function updateNav() {
     if (window.scrollY > 10) {
       nav?.classList.add("!border-white/10");
+      nav?.classList.remove("bg-[#0A0A10]");
     } else {
       nav?.classList.remove("!border-white/10");
+      nav?.classList.add("bg-[#0A0A10]");
     }
     lastScrollY = window.scrollY;
   }
